@@ -2,21 +2,21 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Preference
+    <eu.darken.octi.common.preferences.IntentPreference
         android:icon="@drawable/ic_card_text_onsurface"
         android:title="@string/documentation_label">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://darken.eu" />
-    </Preference>
-    <Preference
+            android:data="https://github.com/d4rken-org/octi/wiki" />
+    </eu.darken.octi.common.preferences.IntentPreference>
+    <eu.darken.octi.common.preferences.IntentPreference
         android:icon="@drawable/ic_github_onsurface"
         android:summary="@string/issue_tracker_description"
         android:title="@string/issue_tracker_label">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://github.com/d4rken-org/octi" />
-    </Preference>
+    </eu.darken.octi.common.preferences.IntentPreference>
     <Preference
         android:icon="@drawable/ic_email_onsurface"
         android:key="support.email.darken"
@@ -27,7 +27,8 @@
             android:icon="@drawable/ic_id_onsurface"
             android:key="support.installid"
             android:summary="@string/support_installid_desc"
-            android:title="@string/support_installid_label" />
+            android:title="@string/support_installid_label"
+            app:isPreferenceVisible="false" />
         <Preference
             android:icon="@drawable/ic_baseline_bug_report_24"
             android:key="support.debuglog"
